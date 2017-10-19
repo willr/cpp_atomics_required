@@ -46,11 +46,11 @@ void tasks::TaskA::runTaskByAtomic()
     printf("runTaskByAtomic config address: %p\n", (void *)config);
     for( int i = 0; i < 10; i++)
     {
-        std::cout << "tasks::TaskA::runTaskByAtomic: reading value from test1: " << config->test1 << std::endl;
+        std::cout << "tasks::TaskA::runTaskByAtomic: reading value from test1: " << config->testX << std::endl;
 
         std::string newVal = std::string{}.append("TaskA::").append(std::to_string(i));
         std::cout << "tasks::TaskA::runTaskByAtomic: setting value to test1: " << newVal << std::endl;
-        config->test1 = i;
+        config->testX = i;
         sleep(1);
     }
 }

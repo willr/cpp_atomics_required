@@ -12,7 +12,7 @@ enum {
     ByPointer
 };
 
-static constexpr int run = ByParam;
+static constexpr int run = ByModule;
 
 int main()
 {

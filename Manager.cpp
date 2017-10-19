@@ -88,11 +88,11 @@ ml::mainLoopByAtomic()
     printf("mainLoopByAtomic config address: %p\n", (void *)config);
     for( int i = 100; i < 110; i++)
     {
-        std::cout << "ml::mainLoopByAtomic: reading value from test1: " << config->test1 << std::endl;
+        std::cout << "ml::mainLoopByAtomic: reading value from test1: " << config->testX << std::endl;
 
         std::string newVal = std::string{}.append("Manager::").append(std::to_string(i));
         std::cout << "ml::mainLoopByAtomic: setting value to test1: " << newVal << std::endl;
-        config->test1 = i;
+        config->testX = i;
         sleep(1);
     }
 }
